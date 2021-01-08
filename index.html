@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!--En-tête de la page-->
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" media="screen and (max-width:1280px)" href="style_min.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="description" content="Réservez votre hébergement">
+        <title>Reservia</title>
+    </head>
+
+    <body>
+        <div id="bloc_page">
+            <!--Header-->
+            <header class="header"> 
+                <img src="images/logo/Reservia.svg"  alt="Logo Reservia" id="logo"/>                      
+                <nav class="navbar"> 
+                    <a class="navlink" href="#rooms">Hébergements</a>
+                    <a class="navlink" href="#activites">Activités</a>
+                    <div class="inscription">
+                        <a class="navlink" href="inscription.html" title="Inscription">S'inscrire</a>
+                    </div>                     
+                </nav>
+            </header>
+
+            <div class="main">
+                <!--Section header main-->
+                <div class="mainheader">
+                    <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+                    <p>En plein centre ville ou en pleine nature</p>
+                </div>
+                
+                <!--Section search header-->
+                <form class="searchForm" method="post" action="searchtown.php">
+                    <div class="searchBar" >
+                        <span class="mapicon"><i class="fas fa-map-marker-alt"></i></span>
+                        <input class="searchtown"type="search" id="searchtown" name="searchtown" placeholder="Marseille, France">
+                        <button type="submit">Rechercher</button><br/>
+                    </div>
+
+
+                    <div class="filter">   
+                        <h2 class="searchFilterTitle">Filtres</h2>
+                        <div class="searchFilter">
+                            <div class="searchFilterEconomy">
+                                <span class="billicon"><i class="fas fa-money-bill-wave"></i></span>
+                                <h3 class="searchFilterEconomyTitle"> Economique</h3>
+                            </div>
+                        </div>
+
+                        <div class="searchFilter">
+                            <div class="searchFilterFamily">
+                                <span class="childicon"><i class="fas fa-child"></i></span>
+                                <h3 class="searchFilterFamilyTitle">Familial</h3>
+                            </div>
+                        </div>
+
+                        <div class="searchFilter">
+                            <div class="searchFilterRomantic">
+                                <span class="hearticon"><i class="fas fa-heart"></i></span>
+                                <h3 class="searchFilterRomanticTitle">Romantique</h3>
+                            </div>
+                        </div>
+
+                        <div class="searchFilter">    
+                            <div class="searchFilterAnimal">
+                                <span class="dogicon"><i class="fas fa-dog"></i></span>
+                                <h3 class="searchFilterAnimalTitle"> Animaux Autorisés</h3>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="information">
+                        <p><span><i class="fas fa-info"></i></span>Plus de 500 logements sont disponibles dans cette ville </p>
+                    </div>
+                </form>
+
+                <!--Section 2 Hébergements-->
+                <section id="rooms">
+                    <!--Article Hébergements-->
+                    <h2 class="roomTitle">Hébergements à</h2>
+                    <div class="imageContainer">
+                        <div class="image">
+                            <figure class="imgcontainer">
+                                <img class="img" src="images/hebergements/auberge_la_cannebiere.jpg" alt="Chambre avec lit superposés" />
+                                <figcaption><strong>Auberge La Cannebière</strong>  
+                                <p class="prix">Nuit à partir de 25€</p>
+                                </figcaption>                     
+                            </figure>
+                        </div>
+                        <div class="image">
+                            <figure class="imgcontainer">
+                                <img class="img" src="images\hebergements\hotel_du_port.jpg" alt="Chambre lumineuse avec lits jumeaux" />
+                                <figcaption><strong>Hôtel du port</strong>
+                                <p class="prix">Nuit à partir de 52€</p>
+                                </figcaption>                        
+                            </figure>
+                        </div>
+                        <div class="image">
+                            <figure class="imgcontainer">
+                                <img class="img" src="images\hebergements\hotel_les_mouettes.jpg" alt="Chambre double lumineuse avec placard et miroir" />
+                                <figcaption><strong>Hôtel les mouettes</strong>
+                                <p class="prix">Nuit à partir de 76€</p> 
+                                </figcaption>                       
+                            </figure>
+                        </div>
+                        <div class="image">
+                            <figure class="imgcontainer">
+                                <img class="img" src="images\hebergements\hotel_de_la_mer.jpg" alt="Chambre dans les tons bleu" />
+                                <figcaption><strong>Hôtel de la mer</strong>
+                                <p class="prix">Nuit à partir de 46€</p> 
+                                </figcaption>                       
+                            </figure>
+                        </div>
+                        <div class="image">
+                            <figure class="imgcontainer">
+                                <img class="img" src="images\hebergements\auberge_le_panier.jpg" alt="Dortoir chaleureux en bois" />
+                                <figcaption><strong>Hôtel Le Panier</strong>
+                                <p class="prix">Nuit à partir de 23€</p>
+                                </figcaption>                        
+                            </figure>
+                        </div>
+                        <div class="image">
+                            <figure class="imgcontainer">
+                                <img class="img" src="images\hebergements\hotel_chez_amina.jpg" alt="Grande chambre lumineuse épurée avec bureau" />
+                                <figcaption><strong>Hôtel chez Amina</strong>
+                                <p class="prix">Nuit à partir de 96€</p>
+                                </figcaption>                        
+                            </figure>
+                        </div>
+                    </div>
+                    <!--Aside Les plus populaires-->
+                </section>
+
+                <!--Section 3 Activités-->
+
+                
+            </div>
+
+
+        </div>
+        
+
+        <!--Footer-->
+        <footer>
+        
+        </footer>
+    </body>
+   
+</html>

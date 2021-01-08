@@ -1,0 +1,245 @@
+/* mise en forme des éléments de base*/
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url('fonts\Raleway-VariableFont_wght.ttf'); 
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    max-width: 1643px;
+    margin:0;
+}
+
+
+/*mise en forme du header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 0px 5px;
+    width: auto;
+    font-size: 0.8em;
+    height: 50px;    
+}
+
+.navbar{
+    display: flex;
+}
+
+.navlink{
+    text-decoration: none;
+    color:#0065FC;
+    justify-content: space-around; 
+    align-items: flex-start; 
+    font-size: 18px;
+    padding: 20px 20px 20px 20px;
+}
+.navlink:active{
+    border-top:2px solid #0065FC;
+    padding-top: 20px;
+}
+
+#logo{
+    display: flex;
+    width: auto;
+    height: 50px; 
+    align-items: flex-end;
+    align-self: flex-end;
+}
+
+/*mise en forme du h1*/
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 1.2em; 
+    margin-bottom: 0em;
+}
+h1 + p{
+    margin-top: 5px;
+}
+
+/*mise en place de la barre de recherche*/
+.searchBar{
+    display:flex;
+    height: 35px;
+    text-align: center;
+    margin-bottom: 10px;    
+}
+
+.mapicon{
+    width: 30px;
+    background-color: lightgrey;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;   
+}
+
+.searchtown{
+    border:lightgrey;
+    padding-left: 5px;
+}
+
+button{
+    border: none;
+    background-color: #0065FC;
+    color: #F2F2F2;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+/*mise en forme des filtres*/
+.filter{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.searchFilter{
+    display: flex;
+    align-items: center;
+    height: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.searchFilterEconomy{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 100%;
+    border: 1px #F2F2F2 solid;
+    border-radius: 50px;
+    padding-right: 0.5em;    
+}
+
+.fas.fa-money-bill-wave{
+    color: #0065FC;
+    width: 3em;
+    height: 3em;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 100%;
+    padding: 0.75em;
+    border: 1px #DEEBFF solid;
+    background-color: #DEEBFF;
+    border-radius: 100%;
+}
+
+.searchFilterFamily{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 100%;
+    border: 1px #F2F2F2 solid;
+    border-radius: 50px;
+    padding-right: 0.5em; 
+}
+
+.fas.fa-child{
+    color: #0065FC;
+    width: 3em;
+    height: 3em;
+    padding:auto;
+    border: 1px #DEEBFF solid;
+    background-color: #DEEBFF;
+    border-radius: 100%;
+}
+
+.searchFilterRomantic{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 100%;
+    border: 1px #F2F2F2 solid;
+    border-radius: 50px;
+    padding-right: 0.5em;
+}
+.fas.fa-heart{
+    color: #0065FC;
+    width: 3em;
+    height: 3em;
+    padding:auto;
+    border: 1px #DEEBFF solid;
+    background-color: #DEEBFF;
+    border-radius: 100%;
+}
+
+.searchFilterAnimal{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 100%;
+    border: 1px #F2F2F2 solid;
+    border-radius: 50px;
+    padding-right: 0.5em;
+}
+.fas.fa-dog{
+    color: #0065FC;
+    width: 3em;
+    height: 3em;
+    padding:auto;
+    border: 1px #DEEBFF solid;
+    background-color: #DEEBFF;
+    border-radius: 100%;
+}
+
+/*mise en forme information*/
+.fas.fa-info{
+    color:#0065FC;
+    width: 0.4em;
+    height: 0.4em;
+    border: 1px #F2F2F2 solid;
+    border-radius: 100%;
+    padding:10px;
+}
+
+#rooms{
+    width: 66%;
+    background-color: #F2F2F2;
+    display: block;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.roomTitle{
+    padding: 10px;
+}
+.imageContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img{
+    margin: 0;
+    padding: 0px;
+    width: 250px;
+    height: 170px;
+    border: #FFFFFF 5px solid;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+figcaption{
+    background-color: #FFFFFF;
+    height: 60px;
+    padding-left: 10px;
+    position: relative;
+    bottom:60px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.prix{
+    margin-top: 0;
+}
