@@ -1,245 +1,373 @@
-/* mise en forme des éléments de base*/
+*{
+    padding:0;
+    margin:0;
+}
+
 @font-face {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway';
     src: url('fonts\Raleway-VariableFont_wght.ttf'); 
 }
 
 body{
     font-family: 'Raleway', sans-serif;
-    max-width: 1643px;
-    margin:0;
 }
 
-
-/*mise en forme du header*/
-.header{
+header{
+    display: flex;
+    justify-content: center;
+}
+.headerMain{
+    width: 1340px;
     display: flex;
     justify-content: space-between;
-    padding: 0px 10px 0px 5px;
-    width: auto;
-    font-size: 0.8em;
-    height: 50px;    
 }
 
+
 .navbar{
-    display: flex;
+    display:flex;
+    padding: 50px 0;
 }
 
 .navlink{
+    padding: 1em 1em 0 1em;
     text-decoration: none;
-    color:#0065FC;
-    justify-content: space-around; 
-    align-items: flex-start; 
-    font-size: 18px;
-    padding: 20px 20px 20px 20px;
+    color:#000000; 
 }
 .navlink:active{
-    border-top:2px solid #0065FC;
-    padding-top: 20px;
+    color:#0065FC;
+    border-top: 2px solid #0065FC;
+}
+.inscription{
+    padding: 1em 1em 0 1em;
+    color: #0065FC;
+    font-weight: bold;
+    
+}
+.logo{
+    padding: 50px 0;
 }
 
-#logo{
-    display: flex;
-    width: auto;
-    height: 50px; 
-    align-items: flex-end;
-    align-self: flex-end;
+.searchSection{
+    width: 1340px;
+    margin:0 auto;
+}
+.searchSectionTitle{
+    font-weight: bold;
+
+}
+.searchSectionPara{
+    margin-top: 15px;
 }
 
-/*mise en forme du h1*/
-h1{
-    font-family: 'Raleway', sans-serif;
-    font-weight: bolder;
-    font-size: 1.2em; 
-    margin-bottom: 0em;
-}
-h1 + p{
-    margin-top: 5px;
-}
-
-/*mise en place de la barre de recherche*/
+/* mise en forme de la section recherche*/
 .searchBar{
-    display:flex;
-    height: 35px;
-    text-align: center;
-    margin-bottom: 10px;    
+    display: flex;
+    height: 50px;
+    align-content: center;
+    margin-top: 25px;
+
 }
 
 .mapicon{
-    width: 30px;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
     background-color: lightgrey;
     border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;   
+    border-bottom-left-radius: 10px; 
+    justify-content: center;
+    align-items: center;
 }
 
-.searchtown{
-    border:lightgrey;
-    padding-left: 5px;
+.searchTown{
+    border:#F2F2F2 1px solid;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
 }
 
 button{
     border: none;
     background-color: #0065FC;
     color: #F2F2F2;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    
+    font-size: 1em;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; 
+    padding-left:10px;   
+    padding-right:10px; 
+    font-weight: bold;
+    width: 135px;
 }
 
-/*mise en forme des filtres*/
-.filter{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+button:active{
+    background-color: #F2F2F2;
+    color: #0065FC;
 }
 
 .searchFilter{
-    display: flex;
-    align-items: center;
-    height: 3em;
-    padding-left: 1em;
-    padding-right: 1em;
+    display:flex;
+}
+.searchFilter h3{
+    margin: auto 0;
 }
 
-.searchFilterEconomy{
+.filterSelection{
     display: flex;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    line-height: 100%;
-    border: 1px #F2F2F2 solid;
-    border-radius: 50px;
-    padding-right: 0.5em;    
+
 }
 
-.fas.fa-money-bill-wave{
-    color: #0065FC;
-    width: 3em;
-    height: 3em;
-    box-sizing: border-box;
-    text-align: center;
-    line-height: 100%;
-    padding: 0.75em;
-    border: 1px #DEEBFF solid;
+.filterGroup i{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: #0065fc;
     background-color: #DEEBFF;
-    border-radius: 100%;
-}
-
-.searchFilterFamily{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    line-height: 100%;
-    border: 1px #F2F2F2 solid;
+    width: 40px;
+    height: 40px;
     border-radius: 50px;
-    padding-right: 0.5em; 
 }
 
-.fas.fa-child{
-    color: #0065FC;
-    width: 3em;
-    height: 3em;
-    padding:auto;
-    border: 1px #DEEBFF solid;
-    background-color: #DEEBFF;
-    border-radius: 100%;
-}
-
-.searchFilterRomantic{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    line-height: 100%;
-    border: 1px #F2F2F2 solid;
+.filterGroup{
+    display:flex;
+    height: 40px;
+    border: #F2F2F2 1px solid;
+    padding-right: 10px;
     border-radius: 50px;
-    padding-right: 0.5em;
+    margin: 30px 25px;
 }
-.fas.fa-heart{
-    color: #0065FC;
-    width: 3em;
-    height: 3em;
-    padding:auto;
-    border: 1px #DEEBFF solid;
-    background-color: #DEEBFF;
-    border-radius: 100%;
+.filterName{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    font-weight: bold;   
+    margin: auto 0;
 }
-
-.searchFilterAnimal{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    line-height: 100%;
-    border: 1px #F2F2F2 solid;
-    border-radius: 50px;
-    padding-right: 0.5em;
-}
-.fas.fa-dog{
-    color: #0065FC;
-    width: 3em;
-    height: 3em;
-    padding:auto;
-    border: 1px #DEEBFF solid;
-    background-color: #DEEBFF;
-    border-radius: 100%;
-}
-
 /*mise en forme information*/
 .fas.fa-info{
+    display: flex;
+    align-items: center;
     color:#0065FC;
     width: 0.4em;
     height: 0.4em;
     border: 1px #F2F2F2 solid;
     border-radius: 100%;
     padding:10px;
+    margin-right: 10px;
+}
+.information p{
+    display: flex;
+    align-items: center;
+}
+.information{
+    margin-bottom: 45px;
+}
+/*mise en forme Section hébergements*/
+
+.lodging{
+    width: 1340px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.activities{
+    width: 1340px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+a{
+    text-decoration: none;
 }
 
-#rooms{
-    width: 66%;
+.lodgingSection{
+    width:60%;
     background-color: #F2F2F2;
-    display: block;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
+    border-radius: 50px;
+    padding:0 50px;
 }
 
-.roomTitle{
-    padding: 10px;
+.lodgingSectionTitle{
+    font-weight: bold;
+    margin:50px 40px 25px 40px;
 }
-.imageContainer{
+
+.lodgingSectionResult{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.img{
-    margin: 0;
-    padding: 0px;
-    width: 250px;
-    height: 170px;
+.imgRoom{
+    width: 235px;
+    height: 190px;
+    border-radius: 20px;
     border: #FFFFFF 5px solid;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
+    object-fit: cover;
 }
-
-figcaption{
-    background-color: #FFFFFF;
-    height: 60px;
-    padding-left: 10px;
+.fullCard{
     position: relative;
-    bottom:60px;
+}
+
+.fullCard div{
+    background-color: #FFFFFF;
+    position: relative;
+    bottom:80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5px 10px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-
+.lodgingCardTitle{
+    color: #000000;
+    font-weight: bolder;
+    margin:5px 0;
+}
 .prix{
-    margin-top: 0;
+    margin-bottom:5px;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    color:#F2F2F2;
+}
+.port li:nth-child(-n+4){
+    color:#0065FC;
+}
+
+.cannebiere li:nth-child(-n+5){
+    color:#0065FC;
+
+}
+.mouette li:nth-child(-n+4){
+    color:#0065FC;
+}
+.mer li:nth-child(-n+3){
+    color:#0065FC;
+}
+.panier li:nth-child(-n+4){
+    color:#0065FC;
+}
+.amina li:nth-child(-n+5){
+    color:#0065FC;
+}
+
+.afficher{
+    font-weight: bold;
+    color: black;
+    padding-bottom: 25px;
+}
+
+/*Mise en place de la section aside popular*/
+.popularSection{
+    width: 30%;
+    background-color: #F2F2F2;
+    border-radius: 50px;
+}
+.popularFullcontainer{
+    display: flex;
+    flex-direction: column;
+
+}
+.popularSectionTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    margin:45px 40px 0px 40px;
+}
+.popularFullcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cardAside{
+    display: flex;
+    justify-content: center;
+    width: 335px;
+    height: 145px; 
+    border: #FFFFFF solid 4px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    margin: 30px auto;
+}
+
+.popularImgRoom{
+    width:125px ;
+    height: 145px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius:20px ;
+}
+.popularCard div{
+    color: black;
+}
+
+.popularCard h3{
+    padding: 12px 20px 15px 20px;
+}
+.popularPrix{
+   padding: 0 20px 30px 20px; 
+}
+.popularCard ul{
+    padding:0 20px 5px 20px;
+}
+.matin li:nth-child(-n+5){
+    color:#0065FC;
+}
+.eau li:nth-child(-n+4){
+    color:#0065FC;
+}
+.blanc li:nth-child(-n+4){
+    color:#0065FC;
+}
+.activitieSection{
+    padding:0 50px;
+    width: 1340px;
+    
+}
+.activitieSection h2{
+    margin: 60px 50px 20px 40px;
+}
+
+.activitieImg{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: #f2f2f2 5px 5px 10px;
+}
+.activitieCardIn{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.activitieCardIn h3{
+    position: absolute;
+    background-color: #fff;
+    color: #000000;
+    box-sizing: border-box;
+    width: 100%;
+    bottom: 0px;
+    height: 55px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    vertical-align: middle;
+
+}
+
+.activitieFullContainer{
+    display: flex;
+    flex-direction: row;
+}
+.containerChild{
+    display: flex;
+    justify-content: space-around;
+}
+.activitieFullContainer :nth-child(2n){
+    display: flex;
+    flex-direction: column;
 }
