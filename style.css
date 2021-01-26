@@ -10,28 +10,34 @@
 
 body{
     font-family: 'Raleway', sans-serif;
+
+}
+
+/*--------------------MISE EN FORME DU HEADER---------------------*/
+
+.headerMain{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
     max-width: 1440px;
     margin: 0 auto;
 }
-
-header{
-    display: flex;
-    justify-content: center;
+.logo img{
+    padding: 50px 0;
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    align-items: baseline;
 }
-.headerMain{
-    width: 1340px;
-    display: flex;
-    justify-content: space-between;
-}
-
 .navbar{
     display:flex;
+    flex-wrap:wrap;
     justify-content: space-around;
-
 }
 
 .navlink{
     padding: 50px 30px ;
+    flex-wrap: wrap;
     text-decoration: none;
     color:#000000; 
 }
@@ -39,37 +45,31 @@ header{
     color:#0065FC;
     border-top: 2px solid #0065FC;
 }
+
 .inscription{
     padding-top: 50px;
     color: #0065FC;
     font-weight: bold;    
 }
 
-.logo{
-    padding: 50px 0;
-}
-
+/*--------------------MISE EN FORME DE LA SECTION RECHERCHE--------------------*/
 .searchSection{
-    width: 1340px;
+    max-width: 1440px;
     margin:0 auto;
 }
 .searchSectionTitle{
     font-weight: bold;
-
 }
 .searchSectionPara{
     margin-top: 15px;
 }
 
-/* mise en forme de la section recherche*/
 .searchBar{
     display: flex;
     height: 50px;
     align-content: center;
-    margin-top: 25px;
-
+    padding: 30px 0;
 }
-
 .mapicon{
     display: flex;
     width: 50px;
@@ -106,17 +106,22 @@ button:active{
     background-color: #F2F2F2;
     color: #0065FC;
 }
+.smartphone{
+    display: none;
+}
 
+/*--------------------MISE EN FORME DES FILTRES--------------------*/
 .searchFilter{
     display:flex;
 }
+
 .searchFilter h3{
     margin: auto 0;
 }
 
 .filterSelection{
     display: flex;
-
+    flex-wrap: wrap;
 }
 
 .filterGroup i{
@@ -128,10 +133,6 @@ button:active{
     width: 40px;
     height: 40px;
     border-radius: 50px;
-}
-.filterGroup i:hover{
-    color: #DEEBFF;
-    background-color: #0065fc;
 }
 
 .filterGroup{
@@ -172,29 +173,26 @@ button:active{
 .information{
     margin-bottom: 45px;
 }
-/*mise en forme Section hébergements*/
+/*--------------------MISE EN FORME SECTION HEBERGEMENTS--------------------*/
 
 #lodging{
-    width: 1340px;
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-}
-#activities{
-    width: 1340px;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
+    flex-wrap: wrap;
+    padding: 0 auto;
 }
 a{
     text-decoration: none;
 }
-
 .lodgingSection{
+    max-width: 1340px;
     width:60%;
+    margin: 0 auto;
     background-color: #F2F2F2;
     border-radius: 50px;
-    padding:0 50px;
+    padding:0 auto;             
 }
 
 .lodgingSectionTitle{
@@ -270,16 +268,19 @@ ul{
     padding-bottom: 25px;
 }
 
-/*Mise en place de la section aside popular*/
+/*--------------------MISE EN PLACE DE LA SECTION POPULAR ASIDE--------------------*/
+
 .popularSection{
-    width: 30%;
+    min-width: 30%;
+    max-width: 60%;
+    margin: 0 auto;
     background-color: #F2F2F2;
     border-radius: 50px;
+    padding:0 40px;
 }
 .popularFullcontainer{
     display: flex;
-    flex-direction: column;
-
+    flex-direction: column;    
 }
 .popularSectionTitle{
     display: flex;
@@ -297,11 +298,14 @@ ul{
     display: flex;
     justify-content: center;
     width: 335px;
-    height: 145px; 
+    height: 145px;
+    box-sizing: border-box;
     border: #FFFFFF solid 4px;
     border-radius: 20px;
     background-color: #FFFFFF;
     margin: 30px auto;
+    border-radius:20px ;
+    overflow: hidden;
 }
 
 .popularImgRoom{
@@ -313,8 +317,9 @@ ul{
 }
 .popularCard div{
     color: black;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius:20px ;
 }
-
 .popularCard h3{
     padding: 12px 20px 15px 20px;
 }
@@ -326,6 +331,7 @@ ul{
 }
 .matin li:nth-child(-n+5){
     color:#0065FC;
+
 }
 .eau li:nth-child(-n+4){
     color:#0065FC;
@@ -333,8 +339,19 @@ ul{
 .blanc li:nth-child(-n+4){
     color:#0065FC;
 }
+.afficher p{
+    padding-left:40px;
+}
+/*--------------------MISE EN FORME DE LA SECTION ACTIVITES--------------------*/
+#activities{                        /* probleme de wrap qui va sur le footer*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-height: auto;
+}
 .activitieSection{
-    width: 1340px;
+    width: 1440px;
+    flex-wrap: wrap;
     margin-bottom: 60px;
     
 }
@@ -347,6 +364,7 @@ ul{
     object-fit: cover;
     border-radius: 20px;
     box-shadow: #f2f2f2 5px 5px 10px;
+    overflow: hidden;
 }
 
 .activitieCardIn{
@@ -370,12 +388,11 @@ ul{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    height: 445px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 447px;
 }
-.containerChild{
-    display: flex;
-    justify-content: space-around;
-}
+
 .activitieFullContainer :nth-child(2n){
     display: flex;
     flex-direction: column;
@@ -383,14 +400,18 @@ ul{
     align-content: flex-start;
 }
 .activitieFullContainer::nth-child(2n+1){
-    height: 445px;
+    height: 447px;
     box-sizing: border-box;
+    object-fit: cover;
 }
 
-/*Mise en place du footer*/
+/*--------------------MISE EN FORME DU FOOTER-------------------*/
 footer{
+    max-width: 100%;
+
     background-color: #F2F2F2;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 50px;
 }
@@ -404,10 +425,48 @@ footer a{
     color: #000000;
     padding-top: 25px;
 }
-@media screen and (max-width:1080px){
+
+/*--------------MISE EN FORME DE LA MEDIA QUERY MAX-WIDTH 1024px---------------------------*/
+@media screen and (max-width:1024px){
 
     .main{
-        width:100%;
+        max-width:100%;
         display: block;
+        margin: 0 auto;;
     }
+    #lodging{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .lodgingSectionResult{
+        width:100%;
+        max-width: 100%;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+    .lodgingSection{
+        margin-bottom: 30px;
+    }
+    .activities{
+
+        display: flex;
+    }
+    .activitieFullContainer{
+        display: flex;
+        justify-content: space-around;
+    }
+    .containerChild{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+/*--------------MISE EN FORME DE LA MEDIA QUERY MAX-WIDTH 1024px---------------------------*/
+@media screen and (max-width:768px){
+    .headerMain{
+        display:block;
+        justify-content: space-between;
+        align-content: flex-start;
+    }
+
 }
