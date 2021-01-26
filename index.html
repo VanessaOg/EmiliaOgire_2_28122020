@@ -3,15 +3,15 @@
     <head>
         <!--En-tête de la page-->
         <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" media="screen and (max-width:1280px)" href="mobile.css"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-        
+        <link rel="stylesheet" href="style.css" />       
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
         <meta name="description" content="Réservez votre hébergement">
         <title>Reservia</title>
     </head>
     <body>
+        <!----------------------HEADER---------------------->
         <header>
             <div class="headerMain">
                 <div class="logo">
@@ -21,12 +21,12 @@
                     <a class="navlink" href="#lodging">Hébergements</a>
                     <a class="navlink" href="#activities">Activités</a>
                         <div class="inscription">
-                            <a class="navlink inscription" href="inscription.html" title="Inscription">S'inscrire</a>
+                            <a class="navlink inscription" href="#" title="Inscription">S'inscrire</a>
                         </div>
                 </div>
             </div>
         </header>
-
+        <!----------------------SECTION RECHERCHE---------------------->
         <section class="searchSection">
             <h1 class="searchSectionTitle">Trouver votre hébergement pour des vacances de rêve</h1>
             <p class="searchSectionPara">En plein centre ville ou en pleine nature</p>
@@ -34,11 +34,12 @@
                 <div class="searchBar">
                     <span class="mapicon"><i class="fas fa-map-marker-alt"></i></span>
                     <input class="searchTown"type="search" id="searchtown" name="searchtown" placeholder="Marseille, France">
-                    <button type="submit">Rechercher</button><br/>
+                    <button class="desktop" type="submit">Rechercher</button><br/>
+                    <button class="smartphone" type="submit"><span><i class="fas fa-search"></i></span><br/>
                 </div>
+        <!----------------------SECTION FILTRES---------------------->
                 <div class="searchFilter">
                     <h3>Filtres</h3>
-
                     <div class="filterSelection">
                         <div class="filterGroup">
                             <i class="fas fa-money-bill-wave"></i>
@@ -66,6 +67,7 @@
                 </div>
             </form>
         </section>
+        <!----------------------SECTION MAIN---------------------->
         <div class="main">
             <div id="lodging">
                 <div class="lodgingSection">
@@ -263,7 +265,7 @@
                             <div class="activitieCard">
                                 <a href="#">
                                     <div class="activitieCardIn">
-                                        <img class="activitieImg"  src="./images/activites/vieux_port.jpg" alt="Vue sur le Vieux Port" />
+                                        <img class="activitieImg"  src="./images/activites/vieux_port.jpg"  alt="Vue sur le Vieux Port" />
                                         <h3>Vieux Port</h3> 
                                     </div>
                                 </a>
@@ -291,7 +293,7 @@
                             <div class="activitieCard">
                                 <a href="#">
                                     <div class="activitieCardIn">
-                                        <img class="activitieImg"  src="./images/activites/parc_national_calanques.jpg" alt="Vue sur le Vieux Port" />
+                                        <img class="activitieImg"  src="./images/activites/parc_national_calanques.jpg" width="300px" height="447px" alt="Vue sur le Vieux Port" />
                                         <h3>Parc National des Calanques</h3> 
                                     </div>
                                 </a>
