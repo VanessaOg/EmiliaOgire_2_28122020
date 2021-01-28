@@ -44,6 +44,7 @@ body{
 .navlink:active{
     color:#0065FC;
     border-top: 2px solid #0065FC;
+    font-weight: bold;
 }
 
 .inscription{
@@ -76,8 +77,8 @@ body{
     height: 50px;
     font-size: 20px;
     background-color: lightgrey;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px; 
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px; 
     justify-content: center;
     align-items: center;
 }
@@ -89,26 +90,28 @@ body{
     font-weight: bold;
 }
 
-button{
+.desktop{
+    display: inline;
     border: none;
     background-color: #0065FC;
     color: #F2F2F2;
     font-size: 1em;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px; 
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px; 
     padding-left:10px;   
     padding-right:10px; 
     font-weight: bold;
     width: 135px;
+}
+.mobile{
+    display: none;
 }
 
 button:active{
     background-color: #F2F2F2;
     color: #0065FC;
 }
-.smartphone{
-    display: none;
-}
+
 
 /*--------------------MISE EN FORME DES FILTRES--------------------*/
 .searchFilter{
@@ -216,6 +219,9 @@ a{
 .fullCard{
     position: relative;
 }
+.fullCard:hover{
+    transform: scale(1.1);
+}
 
 .fullCard div{
     background-color: #FFFFFF;
@@ -235,6 +241,7 @@ a{
 }
 .prix{
     margin-bottom:5px;
+    color: #000000;
 }
 ul{
     display: flex;
@@ -266,6 +273,7 @@ ul{
     font-weight: bold;
     color: black;
     padding-bottom: 25px;
+    padding-left: 40px;
 }
 
 /*--------------------MISE EN PLACE DE LA SECTION POPULAR ASIDE--------------------*/
@@ -304,10 +312,11 @@ ul{
     border-radius: 20px;
     background-color: #FFFFFF;
     margin: 30px auto;
-    border-radius:20px ;
     overflow: hidden;
 }
-
+.popularCard:hover{
+    transform: scale(1.1);
+}
 .popularImgRoom{
     width:125px ;
     height: 145px;
@@ -321,10 +330,10 @@ ul{
     border-bottom-right-radius:20px ;
 }
 .popularCard h3{
-    padding: 12px 20px 15px 20px;
+    padding: 12px 15px 15px 15px;
 }
 .popularPrix{
-   padding: 0 20px 30px 20px; 
+   padding: 0 20px 20px 20px; 
 }
 .popularCard ul{
     padding:0 20px 5px 20px;
@@ -339,15 +348,12 @@ ul{
 .blanc li:nth-child(-n+4){
     color:#0065FC;
 }
-.afficher p{
-    padding-left:40px;
-}
+
 /*--------------------MISE EN FORME DE LA SECTION ACTIVITES--------------------*/
 #activities{                        /* probleme de wrap qui va sur le footer*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-height: auto;
 }
 .activitieSection{
     width: 1440px;
@@ -358,7 +364,9 @@ ul{
 .activitieSection h2{
     margin: 60px 50px 20px 40px;
 }
-
+.activitieCard:hover{
+    transform: scale(1.1);
+}
 .activitieImg{
     width: 300px;
     object-fit: cover;
@@ -390,7 +398,7 @@ ul{
     justify-content: space-between;
     max-width: 100%;
     margin: 0 auto;
-    height: 447px;
+
 }
 
 .activitieFullContainer :nth-child(2n){
@@ -405,26 +413,33 @@ ul{
     object-fit: cover;
 }
 
+
 /*--------------------MISE EN FORME DU FOOTER-------------------*/
 footer{
     max-width: 100%;
-
     background-color: #F2F2F2;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 50px;
 }
 footer div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    padding: 50px;
+    justify-content: flex-start;
 }
-footer a{
+.column p{
+    display: flex;   
+    flex-direction: column;
+    padding:1em 0;
+}
+.column a{
     text-decoration: none;
     color: #000000;
-    padding-top: 25px;
+    padding: .5em 0;    
 }
+.column a:hover{
+    color: #0065FC;
+    font-weight: bold;
+}
+
 
 /*--------------MISE EN FORME DE LA MEDIA QUERY MAX-WIDTH 1024px---------------------------*/
 @media screen and (max-width:1024px){
@@ -461,12 +476,251 @@ footer a{
         justify-content: space-around;
     }
 }
-/*--------------MISE EN FORME DE LA MEDIA QUERY MAX-WIDTH 1024px---------------------------*/
+/*--------------MISE EN FORME DE LA MEDIA QUERY MAX-WIDTH 768px---------------------------*/
 @media screen and (max-width:768px){
-    .headerMain{
-        display:block;
-        justify-content: space-between;
-        align-content: flex-start;
-    }
 
+   .headerMain{
+       display: flex;
+       flex-direction: column;
+       padding: 20px;
+   }
+
+   .logo img{
+    padding-top: 35px ;
+    padding-bottom: 0;
+    max-width: 100%;
+
+    align-items: baseline;
+}
+   .inscription{
+       position: absolute;
+       color:#0065FC;
+       max-width: 50%;
+       border-bottom: none!important;
+       top:15px;
+       right: 30px;
+   }
+   .inscription:active{
+        color: #0065FC;  
+        border-top: none; 
+   }
+   .navbar{
+       justify-content: space-between;
+   }
+   .navlink{
+       padding-top:40px;
+       padding-bottom: 10px;
+   }
+   .navlink:nth-child(1){
+    padding: 40px auto 10px auto;
+    flex-wrap: wrap;
+    max-width: 50%;
+    border-bottom: 2px solid #F2F2F2;
+}
+   .navlink:active{
+    color:#0065FC;
+    border-top: none !important;
+    border-bottom: 2px solid #0065FC;
+}
+.navlink:nth-child(2){
+    padding: 40px auto 10px auto;
+    flex-wrap: wrap;
+    max-width: 50%;
+    border-bottom: 2px solid #F2F2F2;
+}
+.searchSection{
+    margin:0 auto;
+    padding:0 20px;
+}
+.mapicon{
+    min-width: 50px;
+}
+.searchTown{
+    border:#F2F2F2 1px solid;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+.mobile{
+    display: inline;
+    border: none;
+    position: relative;
+    right: 10px;
+    background-color: #0065FC;
+    color: #F2F2F2;
+    font-size: 1em;
+    border-radius: 15px;
+    padding-left:10px;   
+    padding-right:10px; 
+    font-weight: bold;
+    width: 50px;
+}
+.desktop{
+    display: none;
+}
+.searchFilter{
+    display: block;
+}
+.filterGroup{
+    display:flex;
+    height: 40px;
+    border: #F2F2F2 1px solid;
+    padding-right: 10px;
+    border-radius: 50px;
+    margin: 10px 10px;
+}
+.information{
+    margin: 30px auto 45px 15px;
+}
+/*MISE EN FORME DE LA PARTIE LODGING MAX-WIDTH:768px*/
+#lodging{
+    max-width: 768px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    flex-wrap:nowrap;
+    padding: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+.lodgingSection{
+    max-width: 768px;
+    width:100%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 0px;
+    padding:0 auto;             
+}
+
+.lodgingSectionTitle{
+    font-weight: bold;
+    margin:45px 40px 0px 40px;
+
+}
+
+.lodgingSectionResult{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.imgRoom{
+    width: 330px;
+    height: 190px;
+    border-radius: 20px;
+    border: #FFFFFF 5px solid;
+    box-shadow: 5px 5px 5px lightgrey;
+    object-fit: cover;
+}
+.fullCard{
+    display: flex;
+    justify-content: center;
+    width: 335px;
+    height: 195px;
+    box-sizing: border-box;
+    border: #FFFFFF solid 4px;
+    box-shadow: 5px 5px 5px lightgrey;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.fullCard:hover{
+    transform: scale(1.1);
+}
+
+.fullCard div{
+    background-color: #FFFFFF;
+    width: auto;
+    position: relative;
+    bottom: 90px;
+    left:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 5px 5px 5px lightgrey;
+}
+
+.prix{
+    margin-bottom:5px;
+    color: #000000;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    color:#F2F2F2;
+}
+.port li:nth-child(-n+4){
+    color:#0065FC;
+}
+
+.cannebiere li:nth-child(-n+5){
+    color:#0065FC;
+}
+.mouette li:nth-child(-n+4){
+    color:#0065FC;
+}
+.mer li:nth-child(-n+3){
+    color:#0065FC;
+}
+.panier li:nth-child(-n+4){
+    color:#0065FC;
+}
+.amina li:nth-child(-n+5){
+    color:#0065FC;
+}
+
+.afficher{
+    font-weight: bold;
+    color: black;
+    margin : 30px auto ;
+    text-align: start;
+}
+/*MISE EN PAGE ASIDE SECTION POPULAR*/
+.popularSection{
+    max-width: 768px;
+    margin: 0 ;
+    background-color: #F2F2F2;
+    border-radius: 0px;
+    padding:30px auto ;
+}
+
+/*MISE EN PAGE ASIDE SECTION ACTIVITIE*/
+#activities{
+    max-width: 768px;
+}
+.activitieSection{
+    display: block;   
+    max-width: 768px;
+    width:100%;
+    margin: 0 auto;
+    
+}
+.activitieFullContainer{
+    margin: 20px auto;
+    max-width: 768px;
+    width:100%;
+    margin: 0 auto;
+}
+.activitieCardIn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 5px lightgrey;
+}
+footer{
+    display: block;
+}
+footer div{
+    padding: 50px 30px;
+    justify-content: flex-start;
+}
 }
