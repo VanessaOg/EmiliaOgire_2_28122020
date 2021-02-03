@@ -15,7 +15,6 @@ body {
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 0 50px;
 }
 /*--------------------MISE EN FORME DU HEADER---------------------*/
 .headerMain {
@@ -23,7 +22,9 @@ body {
 	justify-content: space-between;
 	align-content: flex-start;
 	max-width: 1440px;
+	box-sizing: border-box;
 	margin: 0 auto;
+	padding: 0 50px;
 }
 .logo img {
 	padding: 50px 0;
@@ -59,6 +60,7 @@ body {
 .searchSection {
 	max-width: 1440px;
 	margin: 0 auto;
+	padding: 0 50px;
 }
 .searchSectionTitle {
 	font-weight: bold;
@@ -180,12 +182,13 @@ button:active {
 /*--------------------MISE EN FORME SECTION HEBERGEMENTS--------------------*/
 
 #lodging {
+	box-sizing: border-box;
 	max-width: 1440px;
-	margin: 0;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	padding: 0;
+	padding: 0 50px;
 }
 a {
 	text-decoration: none;
@@ -193,10 +196,10 @@ a {
 .lodgingSection {
 	max-width: 1340px;
 	width: 60%;
-
+	margin: 0 auto 20px;
 	background-color: #f2f2f2;
 	border-radius: 20px;
-	padding: 0 auto;
+	padding: 0 20px;
 }
 
 .lodgingSectionTitle {
@@ -231,6 +234,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	box-sizing: border-box;
 	padding: 5px 10px;
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius: 20px;
@@ -279,12 +283,15 @@ ul {
 /*--------------------MISE EN PLACE DE LA SECTION POPULAR ASIDE--------------------*/
 
 .popularSection {
+	box-sizing: border-box;
+	margin: 0 auto;
 	min-width: 30%;
 	max-width: 60%;
 	background-color: #f2f2f2;
 	border-radius: 20px;
 }
 .popularFullcontainer {
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 }
@@ -353,6 +360,7 @@ ul {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	margin: 0 auto;
+	padding: 0 50px;
 }
 .activitiesSection {
 	width: 1440px;
@@ -412,7 +420,6 @@ ul {
 
 /*--------------------MISE EN FORME DU FOOTER-------------------*/
 footer {
-	height: 220px;
 	width: 100%;
 	background-color: #f2f2f2;
 	display: flex;
@@ -612,8 +619,7 @@ footer div {
 	}
 	/*MISE EN PAGE ASIDE SECTION POPULAR*/
 	.popularSection {
-		width: 100%;
-		max-width: 768px;
+		max-width: 100%;
 		margin: 0;
 		border-radius: 0px;
 		background-color: #f2f2f2;
@@ -622,8 +628,8 @@ footer div {
 	/*MISE EN FORME DE LA PARTIE LODGING MAX-WIDTH:768px*/
 
 	#lodging {
-		width: 100%;
-		max-width: 768px;
+		width: 768px;
+		max-width: 100%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column-reverse;
@@ -751,10 +757,10 @@ footer div {
 		margin: 0 auto;
 	}
 	.activitiesFullContainer {
+		box-sizing: border-box;
+		width: 100%;
 		margin: 20px auto;
 		max-width: 768px;
-		width: 100%;
-		margin: 0 auto;
 	}
 	.activitiesCardIn {
 		display: block;
