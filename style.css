@@ -33,6 +33,7 @@ body {
 	align-items: baseline;
 }
 .navbar {
+	font-weight: 700;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -58,6 +59,7 @@ body {
 
 /*--------------------MISE EN FORME DE LA SECTION RECHERCHE--------------------*/
 .searchSection {
+	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
 	padding: 0 50px;
@@ -89,7 +91,7 @@ body {
 
 .searchTown {
 	border: #f2f2f2 1px solid;
-	font-size: 1em;
+	font-size: 1.1em;
 	text-align: center;
 	font-weight: bold;
 }
@@ -119,6 +121,7 @@ button:active {
 /*--------------------MISE EN FORME DES FILTRES--------------------*/
 .searchFilter {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .searchFilter h3 {
@@ -182,21 +185,21 @@ button:active {
 /*--------------------MISE EN FORME SECTION HEBERGEMENTS--------------------*/
 
 #lodging {
-	box-sizing: border-box;
+	flex-shrink: 1;
 	max-width: 1440px;
 	margin: 0 auto;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-wrap: wrap;
-	padding: 0 50px;
+	padding: 0;
 }
 a {
 	text-decoration: none;
 }
 .lodgingSection {
-	max-width: 1340px;
-	width: 60%;
-	margin: 0 auto 20px;
+	max-width: 60%;
+	box-sizing: border-box;
+	margin: 0 auto;
 	background-color: #f2f2f2;
 	border-radius: 20px;
 	padding: 0 20px;
@@ -214,6 +217,7 @@ a {
 }
 
 .imgRoom {
+	box-sizing: border-box;
 	width: 235px;
 	height: 190px;
 	border-radius: 20px;
@@ -283,18 +287,15 @@ ul {
 /*--------------------MISE EN PLACE DE LA SECTION POPULAR ASIDE--------------------*/
 
 .popularSection {
+	padding: 0 20px;
 	box-sizing: border-box;
 	margin: 0 auto;
-	min-width: 30%;
-	max-width: 60%;
+	/*min-width: 30%;*/
+	max-width: 40%;
 	background-color: #f2f2f2;
 	border-radius: 20px;
 }
-.popularFullcontainer {
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-}
+
 .popularSectionTitle {
 	display: flex;
 	align-items: center;
@@ -303,16 +304,18 @@ ul {
 	margin: 45px 40px 0px 40px;
 }
 .popularFullcontainer {
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	padding: 0 20px;
+	padding: 0 auto;
 }
 .cardAside {
 	display: flex;
 	justify-content: center;
 	width: 335px;
 	height: 145px;
+	flex-shrink: 1;
 	box-sizing: border-box;
 	border: #ffffff solid 4px;
 	border-radius: 20px;
@@ -424,12 +427,12 @@ footer {
 	background-color: #f2f2f2;
 	display: flex;
 	margin: 0 auto;
-	justify-content: space-around;
-	padding: 0 50px;
+	justify-content: flex-start;
+	padding: 0 auto;
 }
 footer div {
 	padding: 50px;
-	justify-content: flex-start;
+	justify-content: inherit;
 }
 .column p {
 	display: flex;
@@ -457,11 +460,17 @@ footer div {
 	.searchFilter {
 		display: block;
 	}
+	.filterGroup:nth-child(1) {
+		margin-left: 0;
+	}
 	#lodging {
 		display: flex;
+		justify-content: space-around;
 		flex-direction: column;
+		max-width: 1024px;
 		width: 100%;
 		margin: 0 auto;
+		padding: 0 50px;
 	}
 	.lodgingSectionResult {
 		width: 100%;
@@ -470,7 +479,8 @@ footer div {
 	}
 	.lodgingSection {
 		width: 100%;
-		margin: 0 auto 30px 0;
+		margin: 10px auto;
+		justify-content: space-around;
 	}
 	.popularSection {
 		width: 100%;
@@ -479,6 +489,7 @@ footer div {
 	}
 	.activities {
 		display: block;
+		margin: 10px auto;
 	}
 	.activitiesImg {
 		width: 335px;
@@ -488,7 +499,6 @@ footer div {
 
 	.activitiesSection {
 		display: block;
-		max-width: 1024px;
 		width: 100%;
 		margin: 0 auto;
 	}
@@ -625,6 +635,13 @@ footer div {
 		background-color: #f2f2f2;
 		padding: 10px 20px;
 	}
+	.popularSectionTitle {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-weight: bold;
+		margin: 45px 10px 0px 1s0px;
+	}
 	/*MISE EN FORME DE LA PARTIE LODGING MAX-WIDTH:768px*/
 
 	#lodging {
@@ -649,14 +666,6 @@ footer div {
 		padding: 0 auto;
 	}
 
-	.popularSectionTitle {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		font-weight: bold;
-		margin: 45px 10px 0px 1s0px;
-	}
-
 	.lodgingSectionResult {
 		display: flex;
 		flex-direction: column;
@@ -666,17 +675,19 @@ footer div {
 
 	.imgRoom {
 		width: 330px;
+		box-sizing: border-box;
 		height: 190px;
 		border-radius: 20px;
 		border: #ffffff 5px solid;
-		box-shadow: 5px 5px 5px lightgrey;
 		object-fit: cover;
+		position: relative;
+		z-index: 1;
 	}
 	.fullCard {
 		display: flex;
 		justify-content: center;
-		width: 335px;
-		height: 195px;
+		width: 330px;
+		height: 190px;
 		box-sizing: border-box;
 		border: #ffffff solid 4px;
 		box-shadow: 5px 5px 5px lightgrey;
@@ -693,6 +704,7 @@ footer div {
 		background-color: #ffffff;
 		width: auto;
 		position: relative;
+		z-index: 2;
 		bottom: 90px;
 		left: 0px;
 		display: flex;
@@ -742,6 +754,7 @@ footer div {
 
 	/*MISE EN PAGE ASIDE SECTION ACTIVITIES*/
 	#activities {
+		margin: 0 auto;
 		display: block;
 		max-width: 768px;
 	}
@@ -753,7 +766,6 @@ footer div {
 	.activitiesSection {
 		display: block;
 		max-width: 768px;
-		width: 100%;
 		margin: 0 auto;
 	}
 	.activitiesFullContainer {
@@ -773,8 +785,9 @@ footer div {
 	footer {
 		height: auto;
 		display: block;
-		width: 768px;
-		max-width: 100%;
+		width: 100%;
+		max-width: 768px;
+		margin: 0 auto;
 	}
 	footer div {
 		padding: 20px;
