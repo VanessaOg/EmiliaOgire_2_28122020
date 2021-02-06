@@ -14,34 +14,43 @@ body {
 #container {
 	width: 100%;
 	max-width: 1440px;
+	min-width: 320px;
 	margin: 0 auto;
 }
 /*--------------------MISE EN FORME DU HEADER---------------------*/
+
 .headerMain {
+	max-width: 1440px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 0 50px;
 	display: flex;
 	justify-content: space-between;
-	align-content: flex-start;
-	max-width: 1440px;
-	box-sizing: border-box;
-	margin: 0 auto;
-	padding: 0 50px;
+	border: #000000 2px solid;
+}
+.logo {
+	width: 50%;
 }
 .logo img {
-	padding: 50px 0;
 	max-width: 100%;
 	height: auto;
+	padding-top: 47px;
 	align-items: baseline;
+	border: #000000 2px solid;
 }
 .navbar {
 	font-weight: 700;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	border: #000000 2px solid;
 }
-
 .navlink {
-	padding: 50px 30px;
+	display: flex;
+	box-sizing: border-box;
+	padding: 47px 30px;
 	flex-wrap: wrap;
+	text-align: center;
 	text-decoration: none;
 	color: #000000;
 }
@@ -50,25 +59,26 @@ body {
 	border-top: 3px solid #0065fc;
 	font-weight: bold;
 }
-
 .inscription {
-	padding-top: 50px;
+	box-sizing: border-box;
 	color: #0065fc;
 	font-weight: bold;
 }
 
 /*--------------------MISE EN FORME DE LA SECTION RECHERCHE--------------------*/
 .searchSection {
-	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 0 50px;
+	padding: 0 40px;
+	border: red 2px solid;
 }
 .searchSectionTitle {
 	font-weight: bold;
+	border: green 1px solid;
 }
 .searchSectionPara {
 	margin-top: 15px;
+	border: green 1px solid;
 }
 
 .searchBar {
@@ -76,6 +86,7 @@ body {
 	height: 50px;
 	align-content: center;
 	padding: 30px 0;
+	border: green 1px solid;
 }
 .mapicon {
 	display: flex;
@@ -122,15 +133,18 @@ button:active {
 .searchFilter {
 	display: flex;
 	flex-wrap: wrap;
+	border: green 1px solid;
 }
 
 .searchFilter h3 {
 	margin: auto 0;
+	border: rgb(0, 119, 128) 1px solid;
 }
 
 .filterSelection {
 	display: flex;
 	flex-wrap: wrap;
+	border: rgb(0, 119, 128) 1px solid;
 }
 
 .filterGroup i {
@@ -185,47 +199,61 @@ button:active {
 /*--------------------MISE EN FORME SECTION HEBERGEMENTS--------------------*/
 
 #lodging {
-	flex-shrink: 1;
 	max-width: 1440px;
-	margin: 0 auto;
+	margin: 0;
+	box-sizing: border-box;
+	padding: 10px 0;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	flex-wrap: wrap;
-	padding: 0;
+	border: lime 2px solid;
 }
 a {
 	text-decoration: none;
 }
 .lodgingSection {
-	max-width: 60%;
-	box-sizing: border-box;
+	width: 60%;
 	margin: 0 auto;
 	background-color: #f2f2f2;
 	border-radius: 20px;
-	padding: 0 20px;
+	padding: 0px 40px;
+	border: rgb(255, 0, 119) 2px solid;
 }
 
 .lodgingSectionTitle {
 	font-weight: bold;
-	margin: 50px 40px 25px 40px;
+	padding: 20px 40px 20px 20px;
+	border: rgb(255, 0, 119) 2px solid;
 }
 
 .lodgingSectionResult {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	box-sizing: border-box;
+	padding: 1%;
+	justify-content: space-between;
+	border: rgb(140, 0, 255) 2px solid;
 }
 
 .imgRoom {
-	box-sizing: border-box;
 	width: 235px;
-	height: 190px;
-	border-radius: 20px;
-	border: #ffffff 5px solid;
+	height: 115px;
+	position: relative;
 	object-fit: cover;
+	box-sizing: border-box;
+	border: #ffffff 4px solid;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 }
 .fullCard {
-	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	width: 235px;
+	height: 190px;
+	object-fit: cover;
+	margin: 2% auto;
 }
 .fullCard:hover {
 	transform: scale(1.1);
@@ -234,28 +262,26 @@ a {
 .fullCard div {
 	background-color: #ffffff;
 	position: relative;
-	bottom: 80px;
+	top: -4px;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-	box-sizing: border-box;
-	padding: 5px 10px;
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius: 20px;
 }
 .lodgingCardTitle {
 	color: #000000;
 	font-weight: bolder;
-	margin: 5px 0;
+	padding: 5px;
 }
 .prix {
-	margin-bottom: 5px;
+	padding-left: 5px;
 	color: #000000;
 }
 ul {
 	display: flex;
 	list-style-type: none;
 	color: #f2f2f2;
+	padding: 5px;
 }
 .port li:nth-child(-n + 4) {
 	color: #0065fc;
@@ -290,18 +316,20 @@ ul {
 	padding: 0 20px;
 	box-sizing: border-box;
 	margin: 0 auto;
-	/*min-width: 30%;*/
-	max-width: 40%;
+	max-width: calc(60%-40px);
 	background-color: #f2f2f2;
 	border-radius: 20px;
+	border: rgb(255, 0, 119) 2px solid;
 }
 
 .popularSectionTitle {
+	padding: 20px 40px 20px 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	font-weight: bold;
-	margin: 45px 40px 0px 40px;
+	/*margin: 45px 40px 0px 40px;*/
+	border: rgb(255, 0, 119) 2px solid;
 }
 .popularFullcontainer {
 	margin: 0 auto;
@@ -309,6 +337,7 @@ ul {
 	flex-direction: column;
 	justify-content: space-around;
 	padding: 0 auto;
+	border: rgb(140, 0, 255) 2px solid;
 }
 .cardAside {
 	display: flex;
@@ -525,18 +554,22 @@ footer div {
 }
 /*__________________________________________________________________________________________________________________________________*/
 /*----------------------------MISE EN FORME DE LA MEDIA QUERY MAX-WIDTH 768px---------------------------*/
-@media screen and (max-device-width: 768px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
 	#container {
+		min-width: 320px;
 		width: 100%;
-		margin: 0;
+		margin: 0 auto;
 		padding: 0;
 	}
-
 	.headerMain {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
 		margin: 0;
+		padding: 0;
+	}
+	.logo {
+		width: 50%;
 	}
 	.logo img {
 		padding: 35px 0 0 20px;
@@ -558,25 +591,20 @@ footer div {
 		border-top: none;
 	}
 	.navbar {
+		display: flex;
 		justify-content: space-between;
 	}
 	.navlink {
-		display: flex;
+		box-sizing: border-box;
 		padding-top: 40px;
 		padding-bottom: 10px;
-	}
-	.navlink:nth-child(1) {
-		max-width: 50%;
+		width: 50%;
 		border-bottom: 2px solid #f2f2f2;
 	}
 	.navlink:hover {
 		color: #0065fc;
 		border-top: none !important;
 		border-bottom: 2px solid #0065fc;
-	}
-	.navlink:nth-child(2) {
-		max-width: calc(100%-50%);
-		border-bottom: 2px solid #f2f2f2;
 	}
 	.searchSection {
 		margin: 30px auto;
@@ -645,8 +673,9 @@ footer div {
 	/*MISE EN FORME DE LA PARTIE LODGING MAX-WIDTH:768px*/
 
 	#lodging {
-		width: 768px;
-		max-width: 100%;
+		box-sizing: border-box;
+		min-width: 320px;
+		width: 100%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column-reverse;
