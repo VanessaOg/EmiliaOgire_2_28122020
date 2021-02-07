@@ -26,7 +26,6 @@ body {
 	padding: 0 50px;
 	display: flex;
 	justify-content: space-between;
-	border: #000000 2px solid;
 }
 .logo {
 	width: 50%;
@@ -36,14 +35,12 @@ body {
 	height: auto;
 	padding-top: 47px;
 	align-items: baseline;
-	border: #000000 2px solid;
 }
 .navbar {
 	font-weight: 700;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	border: #000000 2px solid;
 }
 .navlink {
 	display: flex;
@@ -52,7 +49,6 @@ body {
 	flex-wrap: wrap;
 	text-align: center;
 	text-decoration: none;
-	color: #000000;
 }
 .navlink:hover {
 	color: #0065fc;
@@ -69,16 +65,13 @@ body {
 .searchSection {
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 0 40px;
-	border: red 2px solid;
+	padding: 0 50px;
 }
 .searchSectionTitle {
 	font-weight: bold;
-	border: green 1px solid;
 }
 .searchSectionPara {
 	margin-top: 15px;
-	border: green 1px solid;
 }
 
 .searchBar {
@@ -86,7 +79,6 @@ body {
 	height: 50px;
 	align-content: center;
 	padding: 30px 0;
-	border: green 1px solid;
 }
 .mapicon {
 	display: flex;
@@ -133,18 +125,15 @@ button:active {
 .searchFilter {
 	display: flex;
 	flex-wrap: wrap;
-	border: green 1px solid;
 }
 
 .searchFilter h3 {
 	margin: auto 0;
-	border: rgb(0, 119, 128) 1px solid;
 }
 
 .filterSelection {
 	display: flex;
 	flex-wrap: wrap;
-	border: rgb(0, 119, 128) 1px solid;
 }
 
 .filterGroup i {
@@ -200,30 +189,29 @@ button:active {
 
 #lodging {
 	max-width: 1440px;
-	margin: 0;
+	width: 100%;
+	margin: 0 auto;
 	box-sizing: border-box;
-	padding: 10px 0;
+	padding: 0 50px;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	border: lime 2px solid;
 }
 a {
 	text-decoration: none;
 }
 .lodgingSection {
+	box-sizing: border-box;
 	width: 60%;
-	margin: 0 auto;
+	margin: 0;
 	background-color: #f2f2f2;
 	border-radius: 20px;
-	padding: 0px 40px;
-	border: rgb(255, 0, 119) 2px solid;
+	padding: 0px;
 }
 
 .lodgingSectionTitle {
 	font-weight: bold;
-	padding: 20px 40px 20px 20px;
-	border: rgb(255, 0, 119) 2px solid;
+	padding: 20px;
 }
 
 .lodgingSectionResult {
@@ -233,7 +221,6 @@ a {
 	box-sizing: border-box;
 	padding: 1%;
 	justify-content: space-between;
-	border: rgb(140, 0, 255) 2px solid;
 }
 
 .imgRoom {
@@ -315,11 +302,10 @@ ul {
 .popularSection {
 	padding: 0 20px;
 	box-sizing: border-box;
-	margin: 0 auto;
+	margin: 0;
 	max-width: calc(60%-40px);
 	background-color: #f2f2f2;
 	border-radius: 20px;
-	border: rgb(255, 0, 119) 2px solid;
 }
 
 .popularSectionTitle {
@@ -328,8 +314,6 @@ ul {
 	align-items: center;
 	justify-content: space-between;
 	font-weight: bold;
-	/*margin: 45px 40px 0px 40px;*/
-	border: rgb(255, 0, 119) 2px solid;
 }
 .popularFullcontainer {
 	margin: 0 auto;
@@ -337,14 +321,13 @@ ul {
 	flex-direction: column;
 	justify-content: space-around;
 	padding: 0 auto;
-	border: rgb(140, 0, 255) 2px solid;
 }
 .cardAside {
 	display: flex;
 	justify-content: center;
 	width: 335px;
 	height: 145px;
-	flex-shrink: 1;
+	flex-grow: 2;
 	box-sizing: border-box;
 	border: #ffffff solid 4px;
 	border-radius: 20px;
@@ -395,8 +378,10 @@ ul {
 	padding: 0 50px;
 }
 .activitiesSection {
-	width: 1440px;
+	width: 100%;
+	max-width: 1440px;
 	flex-wrap: wrap;
+	justify-content: space-around;
 	margin-bottom: 60px;
 }
 .activitiesSection h2 {
@@ -406,11 +391,12 @@ ul {
 	transform: scale(1.1);
 }
 .activitiesImg {
-	width: 300px;
+	box-sizing: border-box;
+	max-width: 300px;
+	width: 100%;
 	object-fit: cover;
 	border-radius: 20px;
 	box-shadow: #f2f2f2 5px 5px 10px;
-	overflow: hidden;
 }
 
 .activitiesCardIn {
@@ -431,11 +417,12 @@ ul {
 }
 
 .activitiesFullContainer {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	max-width: 100%;
+	max-width: 1440px;
+	width: 100%;
 	margin: 0 auto;
+	display: flex;
+	flex-flow: row-wrap;
+	justify-content: space-between;
 }
 
 .activitiesFullContainer :nth-child(2n) {
@@ -456,12 +443,19 @@ footer {
 	background-color: #f2f2f2;
 	display: flex;
 	margin: 0 auto;
-	justify-content: flex-start;
 	padding: 0 auto;
 }
-footer div {
-	padding: 50px;
-	justify-content: inherit;
+.footerGlobal {
+	box-sizing: border-box;
+	max-width: 1440px;
+	width: 100%;
+	display: flex;
+	padding: 0 50px;
+	margin: 0 auto;
+	justify-content: flex-start;
+}
+.column {
+	margin: 50px 100px 50px 0;
 }
 .column p {
 	display: flex;
@@ -481,6 +475,13 @@ footer div {
 /*__________________________________________________________________________________________________________________________________*/
 /*--------------MISE EN FORME DE LA MEDIA QUERY MAX-WIDTH 1024px---------------------------*/
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.headerMain {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
 	.main {
 		width: 100%;
 		display: block;
@@ -502,15 +503,19 @@ footer div {
 		padding: 0 50px;
 	}
 	.lodgingSectionResult {
+		max-width: 1024px;
 		width: 100%;
 		margin: 0 auto;
 		justify-content: space-around;
 	}
 	.lodgingSection {
+		max-width: 1024px;
 		width: 100%;
 		margin: 10px auto;
 		justify-content: space-around;
+		padding: 0;
 	}
+
 	.popularSection {
 		width: 100%;
 		margin: 0 auto;
@@ -532,12 +537,14 @@ footer div {
 		margin: 0 auto;
 	}
 	.activitiesFullContainer {
+		margin: 0 auto;
 		display: flex;
-		flex-wrap: wrap;
+		flex-flow: column wrap;
 		justify-content: space-around;
 	}
 	.containerChild {
 		display: flex;
+		margin: 0 auto;
 	}
 	.activitiesCard {
 		display: block;
@@ -681,18 +688,18 @@ footer div {
 		flex-direction: column-reverse;
 		justify-content: space-around;
 		flex-wrap: nowrap;
-		padding: 0 auto;
+		padding: 0;
 	}
 	a {
 		text-decoration: none;
 	}
 	.lodgingSection {
-		max-width: 768px;
+		min-width: 320px;
 		width: 100%;
 		margin: 0 auto;
 		background-color: #ffffff;
 		border-radius: 20px;
-		padding: 0 auto;
+		padding: 0;
 	}
 
 	.lodgingSectionResult {
@@ -783,25 +790,39 @@ footer div {
 
 	/*MISE EN PAGE ASIDE SECTION ACTIVITIES*/
 	#activities {
+		box-sizing: border-box;
 		margin: 0 auto;
 		display: block;
-		max-width: 768px;
+		width: 100%;
+		padding: 0;
+		min-width: 320px;
 	}
 	.activitiesImg {
-		width: 335px;
+		width: 100%;
 		height: 190px;
+		margin: 0 auto;
 		box-sizing: border-box;
 	}
 	.activitiesSection {
+		box-sizing: border-box;
+		padding: 0 1%;
 		display: block;
 		max-width: 768px;
 		margin: 0 auto;
 	}
+
 	.activitiesFullContainer {
-		box-sizing: border-box;
-		width: 100%;
-		margin: 20px auto;
-		max-width: 768px;
+		margin: 0 auto;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-around;
+	}
+	.containerChild {
+		display: flex;
+		margin: 0 auto;
+	}
+	.activitiesSection h2 {
+		margin: 60px auto;
 	}
 	.activitiesCardIn {
 		display: block;
@@ -811,12 +832,11 @@ footer div {
 		margin-bottom: 20px;
 		box-shadow: 5px 5px 5px lightgrey;
 	}
-	footer {
-		height: auto;
+	.footerGlobal {
 		display: block;
-		width: 100%;
-		max-width: 768px;
-		margin: 0 auto;
+	}
+	.column {
+		margin: 10px auto;
 	}
 	footer div {
 		padding: 20px;
